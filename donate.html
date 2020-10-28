@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+		<head>
+				<title>Back Us | Precious Pets</title>
+				<meta charset="UTF-8">
+				<!-- Tab Icon: https://www.w3.org/2005/10/howto-favicon -->
+				<link rel="icon" href="websiteicon.png">
+				<link rel= "stylesheet" type="text/css" href="style.css">
+				<!-- Loading Social Media Icons: https://www.w3schools.com/icons/fontawesome_icons_intro.asp -->
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+				<script src="myscripts.js"></script>
+		</head>
+		<body>
+				<!-- Navigation Bar -->
+				<nav style="position: static;">
+						<div id="logo">
+								<a href="index.html" onmouseover="mottoColor()" onmouseout="mottoRevert()"></a><!-- Javascript Hover: https://stackoverflow.com/questions/49350534/how-to-call-js-function-on-hover-from-html -->
+								<p id="motto">Adopt, do not shop.</p>
+						</div>
+						<div id="links">
+								<ul>
+										<li><a href="services.html">Services</a></li><!--
+										--><li><a href="faq.html">FAQ</a></li><!--
+										--><li><a id="donate" class="active" href="donate.html">Back Us</a></li>
+								</ul>
+						</div>
+				</nav>
+
+				<!-- Form(s) -->
+				<h2 id="whatwillyoucontribute">What will you contribute?</h2>
+				<main id="contribute">
+						<form style="display: block;">
+								<!-- On Change Function: https://stackoverflow.com/questions/3487263/how-to-use-onclick-or-onselect-on-option-tag-in-a-jsp-page -->
+								<select id="how?" onchange="changeForm()">
+										<option selected style="display: none;">How?</option>
+										<option value="donation">Make a donation.</option>
+										<option value="volunteer">Volunteer with us.</option>
+								</select>
+						</form>
+
+						<form id="donationform">
+								<!-- Input Attributes: https://www.w3schools.com/html/html_form_attributes.asp -->
+								<h3>Basic Information</h3>
+								<input type="text" placeholder="First name:" id="first" required maxlength="24">
+								<input type="text" placeholder="Last name:" id="last" required maxlength="24">
+								<input type="text" placeholder="Email address:" id="address" required maxlength="36">
+								<input type="tel" placeholder="Phone number:" id="phone" required maxlength="13">
+
+								<h3>About Your Donation</h3>
+								<select id="donationchoices" required>
+										<option selected disabled value="blank">How frequently will you donate?</option>
+										<option value="once">One-time</option>
+										<option value="monthly">Monthly</option>
+								</select>
+								<input type="text" placeholder="Amount (NZ$):" id="donationamount" required>
+
+								<h3>Your Payment Details</h3>
+								<input type="type" placeholder="Card number (i.e. 0123 4567 8901 2345):" id="creditcard" required maxlength="19">
+								<input type="number" placeholder="CVV:" id="cvv" required max="999" pattern="([0-9]|[0-9]|[0-9])">
+								<input type="month" value="2020-09" id="expirationdate" required>
+
+								<button type="submit" value="Donation" onclick="donationValidation()">Make your donation.</button>
+								<p id="formresult"></p>
+						</form>
+
+						<form id="volunteerform">
+								<!-- Input Attributes: https://www.w3schools.com/html/html_form_attributes.asp -->
+								<h3>Basic Information</h3>
+								<input type="text" placeholder="First name:" id="firstname" required maxlength="24">
+								<input type="text" placeholder="Last name:" id="lastname" required maxlength="24">
+								<input type="text" placeholder="Email address:" id="email" required maxlength="36">
+								<input type="tel" placeholder="Phone number:" id="call" required maxlength="13">
+								<!-- Text To Date Trick: https://www.geeksforgeeks.org/how-to-set-placeholder-value-for-input-type-date-in-html-5/ -->
+								<input type="text" placeholder="Birthday:" id="birthday" required onfocus="(this.type='date')" onblur="(this.type='text')"><!-- The onfocus and onblur simply change this input from text to date whenever I click on it. -->
+
+								<h3>About You</h3>
+								<textarea rows="5" cols="50" placeholder="Why do you want to work for Precious Pets?" required id="whywork" maxlength="500"></textarea>
+								<textarea rows="5" cols="50" placeholder="What experiences, skills, and interests do you offer?" required id="experience" maxlength="500"></textarea>
+								<select id="hearabout" required>
+										<option selected disabled value="empty">How did you hear about us?</option>
+										<option value="ads">Online ads.</option>
+										<option value="media">Social media posts.</option>
+										<option value="commercial">Television and radio commercials.</option>
+										<option value="word">Word of mouth.</option>
+										<option value="search">Search results.</option>
+								</select>
+
+								<h3>Your Availability</h3>
+								<input type="number" placeholder="How many hours can you work for?" id="hours" required style="margin-bottom: 0px;" maxlength="2">
+								<!-- Field Set Tag: https://www.w3schools.com/tags/tag_fieldset.asp -->
+								<fieldset id="days">
+										<!-- Label Tag: https://www.w3schools.com/tags/tag_label.asp -->
+										<label for="Monday">
+												<input type="checkbox" value="Monday">
+												Monday
+										</label><!--
+										--><label for="Tuesday">
+												<input type="checkbox" value="Tuesday">
+												Tuesday
+										</label><!--
+										--><label for="Wednesday">
+												<input type="checkbox" value="Wednesday">
+												Wednesday
+										</label><!--
+										--><label for="Thursday">
+												<input type="checkbox" value="Thursday">
+												Thursday
+										</label><!--
+										--><label for="Friday">
+												<input type="checkbox" value="Friday">
+												Friday
+										</label><!--
+										--><label for="Saturday"><!-- Pre-checking Checkboxes: https://www.w3schools.com/tags/att_input_checked.asp -->
+												<input type="checkbox" value="Saturday" checked>
+												Saturday
+										</label><!--
+										--><label for="Sunday">
+												<input type="checkbox" value="Sunday" checked>
+												Sunday
+										</label>
+								</fieldset>
+
+								<button type="submit" value="Application" onclick="applicationValidation()">Submit your application.</button>
+								<p id="applicationresult"></p>
+						</form>
+				</main>
+
+				<!-- Footer -->
+				<footer>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.091902751745!2d174.78457281542333!3d-41.306864279271686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38afda5decefeb%3A0xd8ab2d9613bed6a6!2sSPCA%20Vet%20Clinic%20-%20Wellington!5e0!3m2!1sen!2snz!4v1598268558142!5m2!1sen!2snz" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+						</iframe>
+						<table>
+								<tr>
+										<td style="text-align: right;">+64 245<br>554 494</td>
+										<td style="text-align: center; margin: 0 24px;">140 Alexandra Road,<br>Te Aro, Wellington 6011</td>
+										<td style="text-align: left;">narayans@<br>preciouspets.co.nz</td>
+								</tr>
+								<tr style="text-align: center;">
+										<td colspan="3"><a href="https://www.facebook.com" class="fa fa-facebook" target="_blank"></a><!--
+										--><a href="https://www.instagram.com" class="fa fa-instagram" target="_blank"></a><!--
+										--><a href="https://www.youtube.com" class="fa fa-youtube" target="_blank"></a></td>
+								</tr>
+								<tr>
+										<td colspan="3" id="copyright">Copyright &copy; 2020 Precious Pets. All rights reserved.</td>
+								</tr>
+						</table>
+				</footer>
+		</body>
+</html>

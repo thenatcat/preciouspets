@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+		<head>
+				<title>Services | Precious Pets</title>
+				<meta charset="UTF-8">
+				<!-- Tab Icon: https://www.w3.org/2005/10/howto-favicon -->
+				<link rel="icon" href="websiteicon.png">
+				<link rel= "stylesheet" type="text/css" href="style.css">
+				<!-- Loading Social Media Icons: https://www.w3schools.com/icons/fontawesome_icons_intro.asp -->
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+				<script src="myscripts.js"></script>
+		</head>
+		<body>
+				<!-- Navigation Bar -->
+				<nav style="position: static;">
+						<div id="logo">
+								<a href="index.html" onmouseover="mottoColor()" onmouseout="mottoRevert()"></a><!-- Javascript Hover: https://stackoverflow.com/questions/49350534/how-to-call-js-function-on-hover-from-html -->
+								<p id="motto">Adopt, do not shop.</p>
+						</div>
+						<div id="links">
+								<ul>
+										<li><a href="services.html" class="active">Services</a></li><!--
+										--><li><a href="faq.html">FAQ</a></li><!--
+										--><li><a id="donate" href="donate.html">Back Us</a></li>
+								</ul>
+						</div>
+				</nav>
+
+				<!-- Our Services -->
+				<section id="services" class="inlinecontainer">
+						<span class="inline">
+								<img src="petservices_boarding.png" alt="boarding">
+								<h2>Have<br>your pet<br>board<br>with us.</h2>
+								<p>You can count on<br>us to look after<br>your pet while<br>you are away.</p>
+								<p>Available Monday to Sunday, from<br>7am to 11pm.</p>
+						</span><span class="inline" alt="grooming">
+								<img src="petservices_grooming.png">
+								<h2>Get<br>your<br>pet a<br>cleaning.</h2>
+								<p>Keep your pet<br>fresh with our<br>full bath, trim,<br>and tidy up.</p>
+								<p>Available Monday to Friday, from<br>9am to 5pm.</p>
+						</span><span class="inline" alt="socializing">
+								<img src="petservices_socializing.png">
+								<h2>Train<br>your<br>pet for<br>socializing.</h2>
+								<p>We can help you<br>teach your pet to<br>behave and follow<br>your commands.</p>
+								<p>On Tuesdays and Thursdays, from<br>10am to 4pm.</p>
+						</span><span class="inline" alt="vetting">
+								<img src="petservices_vetting.png">
+								<h2>Take<br>your<br>pet to<br>the vet.</h2>
+								<p>Ensure your pet<br>has the most<br>healthy life<br>with a checkup.</p>
+								<p>Available Monday to Sunday, from<br>12pm to 12am.</p>
+						</span><span class="inline" alt="visits">
+								<img src="petservices_visits.png">
+								<h2>Let one<br>of our<br>pets<br>visit you.</h2>
+								<p>Our support pets<br>will offer you a<br>comforting<br>companionship.</p>
+								<p>Available Friday to Monday, from<br>7am to 7pm.</p>
+						</span>
+				</section>
+
+				<!-- Appointment Booking -->
+				<h2 id="bookingheader">Want to book an appointment for our services?</h2>
+				<form id="bookingform">
+						<h3>Basic Information</h3>
+						<input type="text" placeholder="Full name:" id="name" required maxlength="48">
+						<input type="text" placeholder="Email address:" id="address" required maxlength="36">
+						<input type="tel" placeholder="Phone number:" id="tele" required maxlength="13">
+						<h3>Your Payment Method</h3>
+						<fieldset>
+								<!-- Label Tag: http://www.w3schools.com/tags/tag_label.asp -->
+								<label for="Credit Card" style="margin-top:0px;">
+										<input type="radio" value="card" name="paymentmethod" checked="checked">
+										Credit card bill.
+								</label><!--
+								--><label for="Bank Transfer">
+										<input type="radio" value="bank" name="paymentmethod">
+										A bank transfer.
+								</label><!--
+								--><label for="Cash">
+										<input type="radio" value="cash" name="paymentmethod">
+										Cash deposit.
+								</label>
+						</fieldset>
+						<h3>About Your Experience</h3>
+						<select id="servicechoice" required onchange="editPlaceholder()">
+								<option selected disabled value="filler">How can we help you?</option>
+								<option value="boarding">Board my pet.</option>
+								<option value="grooming">Give my pet a clean.</option>
+								<option value="socializing">Train and socialize my pet.</option>
+								<option value="vetting">Vet my pet.</option>
+								<option value="visits">Get a pet visit.</option>
+						</select>
+						<select id="petchoice" required onchange="generateCosts()">
+								<option selected disabled value="fluff">What kind of pet are we servicing?</option>
+								<option value="bigdog">Big dog.</option>
+								<option value="smalldog">Small dog.</option>
+								<option value="cat">Cat.</option>
+								<option value="rabbit">Rabbit.</option>
+								<option value="rodent">Rodent.</option>
+						</select>
+						<p id="costs"></p>
+						<textarea rows="5" cols="50" placeholder="Is there anything we need to know?" required id="additionalinformation" name="AdditionalInformation" maxlength="500"></textarea>
+						<h3>About Your Booking</h3>
+						<!-- Text To Date/Time Trick: https://www.geeksforgeeks.org/how-to-set-placeholder-value-for-input-type-date-in-html-5/ -->
+						<input type="text" placeholder="Booking date:" id="bookingdate" required onfocus="(this.type='date')"
+						onblur="(this.type='text')"><!-- The onfocus and onblur simply change this input from text to date whenever I click on it. -->
+						<input type="text" placeholder="Appointment time? Check with our hours." id="appointmenttime"
+						required onfocus="(this.type='time')" name="appointment" onblur="(this.type='text')">
+						<button type="submit" value="Book" onclick="bookingValidation()">Book your appointment.</button>
+						<p id="bookingmessage"></p>
+				</form>
+
+				<!-- Footer -->
+				<footer>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.091902751745!2d174.78457281542333!3d-41.306864279271686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38afda5decefeb%3A0xd8ab2d9613bed6a6!2sSPCA%20Vet%20Clinic%20-%20Wellington!5e0!3m2!1sen!2snz!4v1598268558142!5m2!1sen!2snz" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+						</iframe>
+						<table>
+								<tr>
+										<td style="text-align: right;">+64 245<br>554 494</td>
+										<td style="text-align: center; margin: 0 24px;">140 Alexandra Road,<br>Te Aro, Wellington 6011</td>
+										<td style="text-align: left;">narayans@<br>preciouspets.co.nz</td>
+								</tr>
+								<tr style="text-align: center;">
+										<td colspan="3"><a href="https://www.facebook.com" class="fa fa-facebook" target="_blank"></a><!--
+										--><a href="https://www.instagram.com" class="fa fa-instagram" target="_blank"></a><!--
+										--><a href="https://www.youtube.com" class="fa fa-youtube" target="_blank"></a></td>
+								</tr>
+								<tr>
+										<td colspan="3" id="copyright">Copyright &copy; 2020 Precious Pets. All rights reserved.</td>
+								</tr>
+						</table>
+				</footer>
+		</body>
+</html>

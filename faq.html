@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+		<head>
+				<title>FAQ | Precious Pets</title>
+				<meta charset="UTF-8">
+				<!-- Tab Icon: https://www.w3.org/2005/10/howto-favicon -->
+				<link rel="icon" href="websiteicon.png">
+				<link rel= "stylesheet" type="text/css" href="style.css">
+				<!-- Loading Social Media Icons: https://www.w3schools.com/icons/fontawesome_icons_intro.asp -->
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+				<script src="myscripts.js"></script>
+		</head>
+		<body>
+				<!-- Navigation Bar -->
+				<nav style="position: static;">
+						<div id="logo">
+								<a href="index.html" onmouseover="mottoColor()" onmouseout="mottoRevert()"></a><!-- Javascript Hover: https://stackoverflow.com/questions/49350534/how-to-call-js-function-on-hover-from-html -->
+								<p id="motto">Adopt, do not shop.</p>
+						</div>
+						<div id="links">
+								<ul>
+										<li><a href="services.html">Services</a></li><!--
+										--><li><a class="active" href="faq.html">FAQ</a></li><!--
+										--><li><a id="donate" href="donate.html">Back Us</a></li>
+								</ul>
+						</div>
+				</nav>
+
+				<!-- FAQ -->
+				<h2 id="faqheader">Want to learn more about us?</h2>
+				<!-- Details Element: https://www.w3schools.com/tags/tag_details.asp -->
+				<details>
+						<summary><b>Is your shelter ethical?</b></summary>
+						<p>Rest assured we treat our pets with utmost respect and compassion.</p>
+
+						<p>Unlike the irresponsible animal shelters putting animals in crowded shacks
+						without proper protection, often leaving them to fend for themselves, we place our
+						precious pets in secure, cosy housing where our foster volunteers will
+						nurture their growth and maintain their wellbeing.</p>
+						<p>Whereas less reputable shelters are irresponsible breeders resorting to puppy mill
+						practices, overbreeding, and inhumane treatment, we desex all our pets to avoid
+						creating an unwanted overpopulation.</p>
+						<p>In terms of euthanasia, we abide by a socially conscious policy so we can promise to help
+						every animal in need regardless of their current condition, even when the best
+						we can do is a painless release.</p>
+				</details>
+				<details>
+						<summary><b>Are your animals vaccinated?</b></summary>
+						<p>We keep our pets up to date with vaccinations to protect their immune system from
+						hepatitis, parvovirus, leptospirosis, plus other infections. Not only will they avoid
+						suffering the symptoms, these vaccines will boost their overall health.</p>
+				</details>
+				<details>
+						<summary><b>Where do your animals come from?</b></summary>
+						<p>Our rescue consists of pets surrendered, abandoned, or abused by their owners, strays
+							wondering the streets, or transfers from another shelter.
+						</p>
+				</details>
+				<details>
+						<summary><b>How can I support Precious Pets?</b></summary>
+						<p>You can apply to be a volunteer or donate some of your money to us through our website.
+						On top of those contributions, you can also mail in-kind packages like pet food to the
+						physical address at the bottom of our webpages.</p>
+				</details>
+				<details>
+						<summary><b>Where do my donations go towards?</b></summary>
+						<p>As a not-for-profit without government funding, we rely on the community on donations
+							and fundraisers toward our animal shelter and clinic operations, foster care program,
+							outreach and advocacy efforts, and pet rescue service.</p>
+				</details>
+				<details>
+						<summary><b>How do I adopt a pet?</b></summary>
+						<p>Send us a message at the email in the website footer, just scroll down the bottom, to register
+						your interest in taking in one of our pets. We will get back to you as soon
+						as we can to interview you on your suitability, preferences, and responsibilities.</p>
+				</details>
+				<details>
+						<summary><b>What are your requirements for adopting?</b></summary>
+						<p>Adopters must be 18 years old or older and live within the Wellington region,
+							ensuring we can accessibly check up on our pets. We also take into consideration
+							how our pet behaves to your children and current household pets, whether you have
+							an open, secure yard, and other potential concerns impacting our pet's experience with you.</p>
+				</details>
+				<details>
+						<summary><b>What are the fees to take in a pet?</b></summary>
+						<p>Depending on the age, breed, and size of the pet, fees can go as low as $200 to as high as $900
+							out of recouping the costs for rehoming and caring for them. These fees go to microchipping,
+							registering, vetting, fostering, and insuring our pets for rehoming.</p>
+				</details>
+				<details>
+						<summary><b>What is the adoption process like?</b></summary>
+						<p>Once we confirm you are suited to adopt one of our precious pets, one of our counselors
+						will guide you towards choosing the pet who will complement your lifestyle. They will introduce you to the
+						animals you are keen on having, leaving you time to play and interact with them to bond with your potential companion.
+						Once you have decided, our counselor will walk you through completing the rest of your adoption forms.</p>
+				</details>
+				<details id="lastquestion">
+						<summary><b>What happens if your pets cannot find a home?</b></summary>
+						<p>Out pets can stay as long as it takes for them to find a loving home.
+						We will not euthanize them except if they are irredemmably sick, injured, or
+						are expressing a temperament dangereous to themselves and others. Until then, they will have
+						safety and comfort with us.</p>
+				</details>
+
+				<!-- More Questions -->
+				<h2 id="morequestions" style="margin-top: 24px;">Do you still have questions?</h2>
+				<form id="questionform">
+						<!-- Input Attributes: https://www.w3schools.com/html/html_form_attributes.asp -->
+						<input type="text" placeholder="Full name:" id="full" required maxlength="48">
+						<input type="text" placeholder="Email address:" id="myemail" required maxlength="36">
+						<input type="text" placeholder="What is on your mind?" id="subjectline" required maxlength="24">
+						<textarea rows="5" cols="50" placeholder="Before you type your questions, check if the above have already answered them for you. If not, type away." required id="messagebox" maxlength="500"></textarea>
+						<button type="submit" value="Message" onclick="questionValidation()">Send your question.</button>
+						<p id="messageresult"></p>
+				</form>
+
+				<!-- Footer -->
+				<footer>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.091902751745!2d174.78457281542333!3d-41.306864279271686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38afda5decefeb%3A0xd8ab2d9613bed6a6!2sSPCA%20Vet%20Clinic%20-%20Wellington!5e0!3m2!1sen!2snz!4v1598268558142!5m2!1sen!2snz" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+						</iframe>
+						<table>
+								<tr>
+										<td style="text-align: right;">+64 245<br>554 494</td>
+										<td style="text-align: center; margin: 0 24px;">140 Alexandra Road,<br>Te Aro, Wellington 6011</td>
+										<td style="text-align: left;">narayans@<br>preciouspets.co.nz</td>
+								</tr>
+								<tr>
+										<td colspan="3"><a href="https://www.facebook.com" class="fa fa-facebook" target="_blank"></a><!--
+										--><a href="https://www.instagram.com" class="fa fa-instagram" target="_blank"></a><!--
+										--><a href="https://www.youtube.com" class="fa fa-youtube" target="_blank"></a></td>
+								</tr>
+								<tr>
+										<td colspan="3" id="copyright">Copyright &copy; 2020 Precious Pets. All rights reserved.</td>
+								</tr>
+						</table>
+				</footer>
+		</body>
+</html>

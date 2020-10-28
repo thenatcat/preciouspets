@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Roboto');
+
+/* GLOBAL */
+/* GLOBAL */
+/* GLOBAL */
+body {
+    width: 100%;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+a, p, h3, label, summary, td {
+    font-family: 'Roboto', sans-serif;
+    font-size: 75%;
+}
+
+h3 {
+    font-size: 87.5%;
+    font-weight: bold;
+}
+
+h1, h2, h4 {
+    font-family: 'Merriweather', sans-serif;
+    font-weight: bold;
+}
+
+h4 {
+    font-weight: normal;
+    font-size: 75%;
+}
+
+h2 {
+    font-weight: normal;
+    color: #ec9706;
+    font-size: 125%;
+}
+
+span h2, span h3, span p {
+    margin: 12px auto;
+    width: 50%;
+}
+
+#whatwillyoucontribute, #contribute form h3,
+#morequestions, #faqheader, #services h2,
+#bookingheader, #bookingform h3 {
+    margin: 0 auto 12px;
+    text-align: center;
+}
+
+#team span:last-child, #mission span:last-child {
+    margin-bottom: 24px;
+}
+
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+for creating flexbox containers. */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inline {
+    display: block;
+    overflow: inherit; /* Overflow: https://www.w3schools.com/css/css_overflow.asp */
+}
+
+.inlinecontainer {
+    text-align: center;
+    margin: auto;
+    overflow: auto; /* Overflow: https://www.w3schools.com/css/css_overflow.asp */
+}
+
+/* Image Overlay Tutorial: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_overlay, which are for image overlays. */
+.overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    overflow: hidden; /* Overflow: https://www.w3schools.com/css/css_overflow.asp */
+    display: block;
+    width: 100%;
+    z-index: 1; /* Z-Index: https://www.w3schools.com/cssref/pr_pos_z-index.asp keeps, which keeps the header and nav content clickable despite an overlay by placing it as the front element. */
+}
+
+nav div {
+    display: inline-block;
+}
+
+nav #logo {
+    height: auto;
+}
+
+nav #logo p {
+    color: #c95b0c;
+    font-family: 'Merriweather';
+    float: right;
+    margin: 0;
+    line-height: 64px; /* Vertically Centering Inline Elements: https://www.w3docs.com/snippets/css/how-to-vertically-align-inline-inline-block-elements.html */
+}
+
+nav #logo a:not(hover) {
+   float: left;
+   height: 40px;
+   width: 40px;
+   margin: 12px;
+   background-image: url("websiteicon.png");
+   background-size: cover; /* Background Image Settings: https://www.w3schools.com/html/html_images_background.asp */
+   transition: all 0.5s ease-in-out;
+}
+
+nav #logo a:hover {
+   background-image: url("websiteiconhover.png");
+   transition: all 0.5s ease-in-out;
+}
+
+nav #logo #activeindex {
+   background-image: url("websiteiconhover.png");
+}
+
+nav #links {
+    float: right;
+}
+
+nav #links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav #links ul li {
+    display: block;
+    line-height: auto; /* Vertically Centering Inline Elements: https://www.w3docs.com/snippets/css/how-to-vertically-align-inline-inline-block-elements.html */
+    margin: 12px;
+    text-align: right;
+}
+
+nav #links ul li a:not(hover) {
+    text-decoration: none;
+    color: #c95b0c;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+nav #links ul li a:hover {
+    color: #ec9706;
+    transition: all 0.5s ease-in-out;
+}
+
+nav #links ul li .active {
+    color: #ec9706;
+}
+
+nav #links ul #donate {
+    font-size: 112.5%;
+}
+
+/* Responsive Web Design: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+@media only screen and (min-width: 900px) {
+    nav #links ul li {
+        display: inline-block;
+        line-height: 64px; /* Vertically Centering Inline Elements: https://www.w3docs.com/snippets/css/how-to-vertically-align-inline-inline-block-elements.html */
+        margin: 0px 12px;
+        text-align: center;
+    }
+    nav #links ul #donate {
+        margin-right: 12px;
+    }
+}
+
+/* Footer */
+footer iframe {
+    width: 100%;
+    height: 180px;
+    display: block;
+}
+
+footer table {
+    margin: 0px auto;
+}
+
+footer table tr {
+    text-align: center;
+}
+
+footer table tr td {
+    padding: 12px 6px 0;
+    width: 128px;
+}
+
+footer table tr td a:not(hover) {
+    background-color: #c95b0c;
+    border-radius: 50%;
+    color: white;
+    padding: 12px;
+    margin: 0 6px;
+    height: 12px;
+    width: 12px;
+    text-align: center;
+    transform: rotate(0deg); /* Transform Property: https://www.w3schools.com/cssref/css3_pr_transform.asp */
+    transition: all 0.5s ease-in-out;
+    text-decoration: none;
+}
+
+footer table tr td a:hover {
+    transform: rotate(20deg);
+    transition: all 0.5s ease-in-out;
+}
+
+footer #copyright {
+    font-size: 50%;
+    text-align: center;
+    padding-bottom: 12px;
+    width: auto;
+}
+
+/* INDEX */
+/* INDEX */
+/* INDEX */
+/* Welcome Image */
+header {
+    background-image: url("welcomeimage.jpg");
+    min-height: 724px;
+     /* Background Image Settings: https://www.w3schools.com/html/html_images_background.asp */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1; /* Z-Index: https://www.w3schools.com/cssref/pr_pos_z-index.asp keeps, which keeps the header and nav content clickable despite an overlay by placing it as the front element. */
+}
+
+/* Welcome Message */
+header div #heromessage {
+    /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ for creating flexbox containers. */
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+header div #heromessage h1 {
+    margin: 0;
+    color: #fff;
+    overflow: hidden; /* Overflow: https://www.w3schools.com/css/css_overflow.asp */
+    max-width: 40%;
+}
+
+header div #heromessage a:not(hover) {
+    background-color: transparent;
+    border: 1px solid #c95b0c;
+    color: #c95b0c;
+    max-width: 40%;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 30px;
+    mix-blend-mode: screen; /* https://www.youtube.com/watch?v=FFf7wnA5MqQ for transparent text over white background, and vice versa. */
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+#heromessage a:hover {
+    background-color: #c95b0c;
+    color: #000;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Who Are We? */
+#whoarewe h2, #whoarewe p {
+    width: 200px;
+    margin: 12px auto 0;
+    text-align: center;
+}
+
+#whoarewe h2 {
+    margin-top: 24px;
+}
+
+/* Mission + Services */
+#mission span, {
+    margin: 0px auto 12px;
+}
+
+#services span {
+    margin: 0 0 12px;
+    display: inline-block;
+}
+
+#mission span:first-child {
+    margin-top: 24px;
+}
+
+#services span:first-child {
+    margin-top: 12px;
+}
+
+#mission span img, #services span img {
+    height: 200px;
+    display: block;
+    width: auto;
+    margin: 0px auto 12px;
+    border-radius: 50%;
+}
+
+#services span img {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+#mission span p, #services span p {
+    margin-bottom: 0px;
+}
+
+/* Responsive Web Design: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+@media only screen and (min-width: 1200px) {
+    #mission span {
+        margin: 0 0 24px;
+        display: inline-block;
+    }
+}
+
+/* Email Subscription */
+#subscribe {
+    background-image: url("subscription.jpg");
+    min-height: 180px;
+    /* Background Image Settings: https://www.w3schools.com/html/html_images_background.asp */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#subscribe div {
+    /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ for creating flexbox containers. */
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#subscribe div h2 {
+    color: #fff;
+    margin: 0 0 12px;
+}
+
+#subscribe div form input, #subscribe div form button {
+    border: none;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 75%;
+    padding: 12px;
+    margin: 0;
+}
+
+#subscribe div form input {
+    width: 260px;
+}
+
+#subscribe div form button {
+    background-color: #c95b0c;
+    color: #fff;
+}
+
+
+#subscribe div form p {
+    color: #fff;
+    text-align: center;
+    margin: 12px auto 0;
+    width: 60%;
+}
+
+/* Meet The Team */
+#team h2 {
+    margin: 24px auto 12px;
+}
+
+#team span {
+    background-color: #e8e8eb;
+    width: 224px;
+    border-radius: 32px;
+    margin: 0px auto 12px;
+}
+
+#team span img {
+    height: 200px;
+    display: block;
+    width: auto;
+    margin: 12px auto 0px;
+    border-radius: 50%;
+}
+
+/* Responsive Web Design: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+@media only screen and (min-width: 900px) {
+    #team span {
+        margin: 0px 6px 24px;
+        display: inline-block;
+    }
+}
+
+/* CONTRIBUTION + QUESTION FORM + BOOKING FORM */
+/* CONTRIBUTION + QUESTION FORM + BOOKING FORM */
+/* CONTRIBUTION + QUESTION FORM + BOOKING FORM */
+#contribute, #questionform, #bookingform {
+    margin: 12px auto 24px;
+    width: 50%;
+    max-width: 480px;
+    background-color: #e8e8eb;
+    border-radius: 32px;
+    padding-top: 12px;
+    overflow: hidden; /* Overflow: https://www.w3schools.com/css/css_overflow.asp */
+}
+
+#whatwillyoucontribute {
+    padding: 240px 12px 12px;
+    width: 50%;
+    max-width: 456px;
+    /* Background Image Settings: https://www.w3schools.com/html/html_images_background.asp */
+    background-image: url(volunteerimage.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 32px;
+    margin-top: 12px;
+    color: #fff;
+}
+
+#contribute form {
+    display: none;
+}
+
+#contribute form h3, #bookingform h3 {
+    color: #ec9706;
+}
+
+#contribute form p, #questionform p, #bookingform p {
+    width: 50%;
+    margin: 0 auto 12px;
+    text-align: center;
+    max-width: 240px;
+}
+
+#contribute form select, #contribute form option,
+#contribute form input, #contribute form button,
+#contribute form textarea, #questionform input,
+#questionform button, #questionform textarea,
+#bookingform select, #bookingform option,
+#bookingform input, #bookingform button,
+#bookingform textarea {
+    border: none;
+    background-color: #fff;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    margin: auto;
+    padding: 12px;
+    width: 50%;
+    max-width: 240px;
+    box-sizing: content-box; /* Getting The Inputs The Same Width: https://stackoverflow.com/questions/52398046/cant-get-input-text-boxes-and-buttons-the-same-size */
+    margin-bottom: 12px;
+}
+
+#contribute form textarea, #questionform textarea, #bookingform textarea {
+    height: 120px;
+}
+
+#contribute form fieldset, #bookingform fieldset {
+    margin: 6px auto;
+    border: none;
+    width: 50%;
+    max-width: 240px;
+    text-align: center;
+    padding: 0px;
+}
+
+#bookingform fieldset {
+    margin: 0px auto 6px;
+}
+
+#bookingform fieldset label {
+    display: inline-flex;
+    margin: 0px 0px 6px;
+    text-align: left;
+}
+
+#bookingform fieldset label input {
+    margin: auto 0;
+}
+
+#contribute form fieldset label input {
+    margin: 0 auto 4px;
+}
+
+#contribute form fieldset label {
+    display: inline-block;
+    margin: 6px;
+}
+
+#contribute form button, #questionform button, #bookingform button {
+    background-color: #c95b0c;
+    color: #fff;
+}
+
+/* FAQ */
+/* FAQ */
+/* FAQ */
+#faqimage {
+    width: 50%;
+    max-width: 504px;
+    height: auto;
+    margin: 12px auto;
+    display: block;
+}
+
+#faqheader {
+    padding: 240px 12px 12px;
+    width: 50%;
+    max-width: 456px;
+    /* Background Image Settings: https://www.w3schools.com/html/html_images_background.asp */
+    background-image: url(faqimage.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 32px;
+    margin-top: 12px;
+    color: #fff;
+}
+
+details {
+    background-color: #e8e8eb;
+    padding: 12px;
+    margin: 0 auto 12px;
+    max-width: 456px;
+    width: 50%;
+    border-radius: 16px;
+}
+
+details p {
+    margin: 12px 0 0;
+}
+
+/* SERVICES */
+/* SERVICES */
+/* SERVICES */
+#services {
+    margin-bottom: 12px;
+}

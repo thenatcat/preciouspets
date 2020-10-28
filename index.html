@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+		<head>
+				<title>Precious Pets</title>
+				<meta charset="UTF-8">
+				<!-- Tab Icon: https://www.w3.org/2005/10/howto-favicon -->
+				<link rel="icon" href="websiteicon.png">
+				<link rel= "stylesheet" type="text/css" href="style.css">
+				<!-- Loading Social Media Icons: https://www.w3schools.com/icons/fontawesome_icons_intro.asp -->
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+				<script src="myscripts.js"></script>
+		</head>
+		<body>
+				<!-- Navbar + Welcome Image -->
+				<header>
+						<div class="overlay">
+								<nav>
+										<div id="logo">
+												<a id="activeindex" href="index.html"></a>
+										</div>
+										<div id="links">
+												<ul>
+														<li><a href="services.html">Services</a></li><!--
+														--><li><a href="faq.html">FAQ</a></li><!--
+														--><li><a id="donate" href="donate.html">Back Us</a></li>
+												</ul>
+										</div>
+								</nav>
+								<section id=heromessage class="flex">
+										<h1>Adopt, do not shop, at Precious Pets.</h1>
+										<a href="services.html">How can we help your pet?</a>
+								</section>
+						</div>
+				</header>
+
+				<!-- Who Are We? -->
+				<!-- Section: https://www.w3schools.com/tags/tag_section.asp -->
+				<section id="whoarewe">
+						<h2 class="">Who are we?</h2>
+						<p>We are Precious Pets, <i>a rescue and adoption service
+						for local councils, animal charities, and pet owners.</i>
+						While the pets are in our keeping, we promise we will put our
+						heart and soul into cherishing them.</p>
+						<p>Caring for them involves thoroughly
+						<i>vetting our future owners,</i> ensuring they
+						are in the right hands. Before we rehome
+						them, <i>we treat their injuries and disorders
+						out of their welfare.</i></p>
+						<p>To preserve our purpose, we need your contributions
+						to support the staff <i>cleaning, rescuing, tending, fostering, feeding, and
+						sheltering our precious pets.</i> Whether it is your volunteering or
+						charity, it would mean a lot to us.</p>
+						<!-- Although the workshop guide italicizes with CSS, I prefer italicizing with HTML for specificity and efficiency -->
+				</section>
+
+				<!-- Precious Pets Mission -->
+				<!-- Section: https://www.w3schools.com/tags/tag_section.asp -->
+				<section id="mission" class="inlinecontainer">
+						<span class="inline">
+								<img src="missionvision.png" alt="vision">
+								<h2>What is<br>our<br>purpose?</h2>
+								<p>To be an oasis for the pets we rescue.</p>
+						</span><span class="inline" alt="purpose">
+								<img src="missionpurpose.png">
+								<h2>What is<br>our<br>mission?</h2>
+								<p>Nursing, nurturing, and rehoming our pets.</p>
+						</span><span class="inline" alt="values">
+								<img src="missionvalues.png">
+								<h2>What is<br>our<br>values?</h2>
+								<p>We dedicate, we respect, and we serve.</p>
+						</span>
+				</section>
+
+				<!-- Email Subscription -->
+				<!-- Section: https://www.w3schools.com/tags/tag_section.asp -->
+				<section id="subscribe">
+						<div class="flex overlay">
+								<h2>Want to get in touch?</h2>
+								<form name="newslettersubscription">
+										<!-- Input Attributes: https://www.w3schools.com/html/html_form_attributes.asp -->
+										<input type="text" placeholder="Enter your email here." id="enteremail" required><button type="submit" value="Subscribe" onclick="validateEmail(document.newslettersubscription.enteremail);">Subscribe to us.</button>
+										<p id="message"></p>
+								</form>
+						</div>
+				</section>
+
+				<!-- The Team -->
+				<!-- Section: https://www.w3schools.com/tags/tag_section.asp -->
+				<section id="team" class="inlinecontainer">
+						<h2>Who is in our team?</h2>
+						<span class="inline">
+								<img src="harvey.jfif" alt="Harvey Mullins">
+								<h3>Harvey<br>Mullins</h3>
+								<p>Our resident veterinarian, Harvey is the one keeping our pets as fit as a fiddle.</p>
+						</span><!--
+						--><span class="inline">
+								<img src="siddharth.jfif" alt="Siddharth Narayan">
+								<h3>Siddharth<br>Narayan</h3>
+								<p>Siddharth is our shelter manager, so our pets have a good roof over their heads.</p>
+						</span>
+				</section>
+
+				<!-- Footer -->
+				<footer>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.091902751745!2d174.78457281542333!3d-41.306864279271686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38afda5decefeb%3A0xd8ab2d9613bed6a6!2sSPCA%20Vet%20Clinic%20-%20Wellington!5e0!3m2!1sen!2snz!4v1598268558142!5m2!1sen!2snz" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+						</iframe>
+						<table>
+								<tr>
+										<td style="text-align: right;">+64 245<br>554 494</td>
+										<td style="text-align: center; margin: 0 24px;">140 Alexandra Road,<br>Te Aro, Wellington 6011</td>
+										<td style="text-align: left;">narayans@<br>preciouspets.co.nz</td>
+								</tr>
+								<tr style="text-align: center;">
+										<td colspan="3"><a href="https://www.facebook.com" class="fa fa-facebook" target="_blank"></a><!--
+										--><a href="https://www.instagram.com" class="fa fa-instagram" target="_blank"></a><!--
+										--><a href="https://www.youtube.com" class="fa fa-youtube" target="_blank"></a></td>
+								</tr>
+								<tr>
+										<td colspan="3" id="copyright">Copyright &copy; 2020 Precious Pets. All rights reserved.</td>
+								</tr>
+						</table>
+				</footer>
+		</body>
+</html>
